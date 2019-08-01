@@ -5,9 +5,102 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f6f2;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  max-width: 1280px;
+  padding: 0 8rem;
+  margin: 0 auto;
+}
+
+.area {
+  margin: 150px 0;
+  text-align: center;
+}
+.output {
+  font-family: sans-serif;
+  color: #38470b;
+  font-size: 58px;
+  animation: blink-empty 1s infinite;
+  border-right: transparent solid 5px;
+}
+
+@keyframes blink-empty {
+  50% {
+    border-right: 5px solid #38470b;
+  }
+}
+
+.Keyboard {
+  margin: 50px auto 0;
+  background-image: -webkit-linear-gradient(
+    top,
+    #fff 0%,
+    #f2f2f2 25%,
+    #d9d9d9 100%
+  );
+  -moz-border-radius-topleft: 7px 21px;
+  -moz-border-radius-topright: 7px 21px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 7px 21px;
+  border-top-right-radius: 7px 21px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 50px 15px;
+  -webkit-box-shadow: inset 0 0 8px #bbb, 0 1px 0 #aaa, 0 4px 0 #bbb,
+    0 10px 30px #ddd;
+  -moz-box-shadow: inset 0 0 8px #bbb, 0 1px 0 #aaa, 0 4px 0 #bbb,
+    0 10px 30px #ddd;
+  box-shadow: inset 0 0 8px #bbb, 0 1px 0 #aaa, 0 4px 0 #bbb, 0 10px 30px #ddd;
+}
+
+.Keyboard--char {
+  cursor: pointer;
+  font-size: 22px;
+  min-width: 100px;
+  width: auto;
+  color: #38470b;
+  cursor: pointer;
+  margin: 16px 8px;
+  height: 100px;
+  border-color: #f2f2f2;
+  border-style: solid;
+  text-shadow: 0 0.5px 1px #777, 0 2px 6px #f2f2f2;
+  border-width: 1px;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(
+    top,
+    #f9f9f9 0%,
+    #d2d2d2 80%,
+    #c0c0c0 100%
+  );
+  font-family: sans-serif;
+  display: inline-block;
+  transition: box-shadow 0.3s ease, transform 0.15s ease;
+  box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #c0c0c0,
+    0 8px 17px rgba(68, 68, 68, 0.4), 2px 1px 4px rgba(68, 68, 68, 0.25),
+    -2px 1px 4px rgba(68, 68, 68, 0.25), 0 9px 16px rgba(68, 68, 68, 0.1);
+}
+
+.Keyboard--char:hover,
+.Keyboard--char:focus {
+  box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 4px 0 #c0c0c0,
+    0 2px 35px rgba(#444, 0.3), 2px 2px 4px rgba(#444, 0.25),
+    -2px 2px 4px rgba(#444, 0.25), 0 7px 4px rgba(#444, 0.1);
+  transform: translateY(2px);
+}
+
+.Keyboard--char:active {
+  box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 0 0 #c0c0c0,
+    0 0px 30px rgba(#444, 0.15), 2px 2px 4px rgba(#444, 0.25),
+    -2px 2px 4px rgba(#444, 0.25), 0 0px 4px rgba(#444, 0.25);
+  transform: translateY(4px);
 }
